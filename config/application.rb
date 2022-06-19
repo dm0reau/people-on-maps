@@ -30,6 +30,7 @@ module PeopleOnMaps
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.google_maps = config_for(:google_maps)
 
     # Don't generate system test files.
     config.generators.system_tests = nil

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>PeopleOnMaps</title>
+    <title>People on Maps</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to "Map", root_path %>
+      <%= link_to "People", people_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>
