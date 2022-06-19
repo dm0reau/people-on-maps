@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
-import MapController from "./map_controller";
-application.register("map", MapController);
+import MapController from "./map_controller.js"
+application.register("map", MapController)
+
+import PeopleController from "./people_controller.js"
+application.register("people", PeopleController)

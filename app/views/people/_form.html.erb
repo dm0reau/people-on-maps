@@ -1,4 +1,4 @@
-<%= form_with(model: person) do |form| %>
+<%= form_with(model: person, data: {controller: 'people'}) do |form| %>
   <% if person.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
@@ -22,13 +22,19 @@
   </div>
 
   <div>
+    <button type="button" data-action="people#geolocation" data-people-target="geolocation">
+      Fill with your current geolocation
+    </button>
+  </div>
+
+  <div>
     <%= form.label :lat, style: "display: block" %>
-    <%= form.text_field :lat %>
+    <%= form.text_field :lat, data: { 'people-target' => 'lat' } %>
   </div>
 
   <div>
     <%= form.label :lng, style: "display: block" %>
-    <%= form.text_field :lng %>
+    <%= form.text_field :lng, data: { 'people-target' => 'lng' } %>
   </div>
 
   <div>
